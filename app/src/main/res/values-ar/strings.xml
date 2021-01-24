@@ -1,0 +1,9 @@
+<resources>
+
+  <string name="locator_ok">موافق</string>
+  <string name="locator_cancel">إلغاء</string>
+  <string name="locator_attention">إنتبه!</string>
+  <string name="locator_location_permission">يتطلب التطبيق الوصول إلى موقعك. الرجاء تمكين خدمة الموقع لتجربة أكثر دقة.</string>
+  <string name="locator_go_settings">اذهب للإعدادت</string>
+
+</resources>

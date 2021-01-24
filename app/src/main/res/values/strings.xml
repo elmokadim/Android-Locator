@@ -1,0 +1,11 @@
+<resources>
+
+  <string name="app_name"
+    translatable="false">Locator</string>
+  <string name="locator_ok">OK</string>
+  <string name="locator_cancel">Cancel</string>
+  <string name="locator_attention">Pay Attention!</string>
+  <string name="locator_location_permission">Locator requires access to your location. Please enable location service for more accurate experience.</string>
+  <string name="locator_go_settings">Go to Settings</string>
+
+</resources>

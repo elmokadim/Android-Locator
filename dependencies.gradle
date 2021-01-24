@@ -1,0 +1,17 @@
+ext {
+    appDependency = [
+            // Support libs
+            appcompat       : "androidx.appcompat:appcompat:1.3.0-alpha02",
+            material        : "com.google.android.material:material:1.3.0-beta01",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:2.1.0-alpha2",
+
+            // Kotlin
+            anko            : "org.jetbrains.anko:anko:0.10.8",
+            activityKtx     : "androidx.activity:activity-ktx:1.2.0-rc01",
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.21",
+
+            // Utils
+            sdp             : "com.intuit.sdp:sdp-android:1.0.6",
+            ssp             : "com.intuit.ssp:ssp-android:1.0.6"
+    ]
+}
