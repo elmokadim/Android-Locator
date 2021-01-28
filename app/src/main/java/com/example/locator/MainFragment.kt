@@ -8,7 +8,12 @@ import android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
-import dev.mokadim.locator.*
+import dev.mokadim.locator.Locator
+import dev.mokadim.locator.Locator.Companion.LocationStatus
+import dev.mokadim.locator.Locator.Companion.PERMISSION_PERMANENTLY_REJECTED
+import dev.mokadim.locator.Locator.Companion.PERMISSION_REJECTED
+import dev.mokadim.locator.Locator.Companion.SETTINGS_REJECTED
+import dev.mokadim.locator.Locator.Companion.SETTINGS_UNAVAILABLE
 import kotlinx.android.synthetic.main.fragment_main.*
 import org.jetbrains.anko.support.v4.alert
 

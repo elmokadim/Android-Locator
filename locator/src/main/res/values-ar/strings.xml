@@ -1,8 +1,3 @@
 <resources>
 
-  <string name="locator_attention">انتبه!</string>
-  <string name="locator_location_permission_msg">السماح للوصول للموقع الحالي ضروري لتجربة سلسة.</string>
-  <string name="locator_grant">منح الإذن</string>
-  <string name="locator_cancel">إلغاء</string>
-  
 </resources>

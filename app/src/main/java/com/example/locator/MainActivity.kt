@@ -7,7 +7,12 @@ import android.os.Bundle
 import android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import dev.mokadim.locator.*
+import dev.mokadim.locator.Locator
+import dev.mokadim.locator.Locator.Companion.LocationStatus
+import dev.mokadim.locator.Locator.Companion.PERMISSION_PERMANENTLY_REJECTED
+import dev.mokadim.locator.Locator.Companion.PERMISSION_REJECTED
+import dev.mokadim.locator.Locator.Companion.SETTINGS_REJECTED
+import dev.mokadim.locator.Locator.Companion.SETTINGS_UNAVAILABLE
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.appcompat.v7.Appcompat
@@ -23,11 +28,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
   private val locator by lazy {
     Locator.Builder(this)
-        .interval(5000L)
-        .fastestInterval(2500L)
-        .smallestDisplacement(50F)
-        .requireLocationSettings(true)
-        .printLog(true)
+        .interval(5000L) // Optional
+        .fastestInterval(2500L) // Optional
+        .smallestDisplacement(50F) // Optional
+        .requireLocationSettings(true) // Optional
+        .printLog(true) // Optional
         .build()
   }
 

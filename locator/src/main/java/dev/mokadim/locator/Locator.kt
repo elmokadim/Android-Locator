@@ -5,6 +5,7 @@ import android.content.Intent
 import android.location.Location
 import android.os.Looper
 import android.util.Log
+import androidx.annotation.IntDef
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -15,6 +16,9 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices.getFusedLocationProviderClient
+import kotlin.annotation.AnnotationRetention.SOURCE
+import kotlin.annotation.AnnotationTarget.TYPE
+import kotlin.annotation.AnnotationTarget.VALUE_PARAMETER
 
 /**
  * Ahmed Elmokadim
@@ -22,6 +26,31 @@ import com.google.android.gms.location.LocationServices.getFusedLocationProvider
  * 01/01/2021
  */
 class Locator private constructor(@NonNull private val activity: AppCompatActivity) {
+
+  companion object {
+    internal const val REQUEST_CHECK_SETTINGS = 1000
+
+    internal const val REQUIRE_LOCATION_SETTINGS = "RequireLocationSettings"
+    internal const val PRINT_LOG = "PrintLog"
+    internal const val TAG = "Locator"
+
+    internal val locationStatusLiveData by lazy { MutableLiveData<@LocationStatus Int>() }
+
+    @Retention(SOURCE)
+    @Target(TYPE, VALUE_PARAMETER)
+    @IntDef(NONE, PERMISSION_ACCEPTED, PERMISSION_REJECTED, PERMISSION_PERMANENTLY_REJECTED,
+        SETTINGS_SATISFIED, SETTINGS_REJECTED, SETTINGS_UNAVAILABLE, ALL_GRANTED)
+    annotation class LocationStatus
+
+    internal const val NONE = 0
+    internal const val PERMISSION_ACCEPTED = 1
+    internal const val SETTINGS_SATISFIED = 2
+    internal const val ALL_GRANTED = 3
+    const val PERMISSION_REJECTED = 4
+    const val PERMISSION_PERMANENTLY_REJECTED = 5
+    const val SETTINGS_REJECTED = 6
+    const val SETTINGS_UNAVAILABLE = 7
+  }
 
   private var mInterval = 3000L
   private var mFastestInterval = 1500L

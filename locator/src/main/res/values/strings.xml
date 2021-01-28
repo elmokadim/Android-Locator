@@ -1,8 +1,3 @@
 <resources>
 
-  <string name="locator_attention">Pay Attention!</string>
-  <string name="locator_location_permission_msg">Current location permission is necessary for smooth experience.</string>
-  <string name="locator_grant">Grant Permission</string>
-  <string name="locator_cancel">Cancel</string>
-
 </resources>

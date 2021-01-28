@@ -15,6 +15,18 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.LocationSettingsRequest
 import com.google.android.gms.location.LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE
+import dev.mokadim.locator.Locator.Companion.ALL_GRANTED
+import dev.mokadim.locator.Locator.Companion.LocationStatus
+import dev.mokadim.locator.Locator.Companion.PERMISSION_ACCEPTED
+import dev.mokadim.locator.Locator.Companion.PERMISSION_PERMANENTLY_REJECTED
+import dev.mokadim.locator.Locator.Companion.PERMISSION_REJECTED
+import dev.mokadim.locator.Locator.Companion.PRINT_LOG
+import dev.mokadim.locator.Locator.Companion.REQUEST_CHECK_SETTINGS
+import dev.mokadim.locator.Locator.Companion.REQUIRE_LOCATION_SETTINGS
+import dev.mokadim.locator.Locator.Companion.SETTINGS_REJECTED
+import dev.mokadim.locator.Locator.Companion.SETTINGS_UNAVAILABLE
+import dev.mokadim.locator.Locator.Companion.TAG
+import dev.mokadim.locator.Locator.Companion.locationStatusLiveData
 
 /**
  * Ahmed Elmokadim
