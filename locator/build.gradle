@@ -14,7 +14,7 @@ ext {
     artifact = 'android-locator'
     libraryName = 'locator'
 
-    libraryDescription = 'Locator is an Android library that simplifies the process of requesting current location and location updates at runtime.'
+    libraryDescription = 'Getting current location and location updates can\'t be easier on Android without warring about permissions or location settings anymore.'
 
     siteUrl = 'https://github.com/elmokadim/Android-Locator'
     gitUrl = 'https://github.com/elmokadim/Android-Locator.git'
